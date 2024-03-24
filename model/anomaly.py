@@ -9,7 +9,7 @@ import os
 import numpy as np
 from transformers import T5Tokenizer, T5ForConditionalGeneration, T5Config, Adafactor
 from transformers import BertModel, BertConfig 
-from transformers.models.bert.modeling_bert import BertEmbeddings, BertEncoder, BertPooler
+from transformers.models.bert.modeling_bert import BertEmbeddings, BertEncoder, BertPooler # NOTE: the BERT (or other modules apart from GPT) was used during the development process and partially used as placeholders in this script, and will not be actually loaded/trained
 
 import transformers
 import torch
@@ -148,7 +148,7 @@ our_config={'med':{
 
 
 
-config=BertConfig.from_pretrained(our_config['config_path'])
+config=BertConfig.from_pretrained(our_config['config_path']) # NOTE: the BERT (or other modules apart from GPT) was used during the development process and partially used as placeholders in this script, and will not be actually loaded/trained
 
 print(config)
 
@@ -737,7 +737,7 @@ print('pandemic-related drg sample num:', len(drg_data))
 
 
 
-class our_bert(BertModel):
+class our_bert(BertModel): # NOTE: the BERT here was used during the development process and partially used as placeholders in this script, which will not be actually loaded/trained
     def __init__(self, config):
         super().__init__(config)
     
@@ -893,7 +893,7 @@ class our_bert(BertModel):
         
         
         sequence_output=self.causal_encoder(src=embedding_output,
-                                            is_causal=True, # is_causal: make sure the encoder is unidirectional, so that we only use past clinical features to predict future
+                                            is_causal=True, # is_causal: make sure the encoder is unidirectional, so that we only use past clinical features to predict future. This guarantees the GPT training style
                                             mask=torch.nn.Transformer.generate_square_subsequent_mask(max_seq_len).cuda(),
                                             )
         
@@ -1070,7 +1070,7 @@ def pred_one_dataset_batch_causal(model,dataset,batchsize=our_config['eval_batch
 
 
 if our_config['ckpt']:
-  model = our_bert.from_pretrained(our_config['ckpt']).cuda()
+  model = our_bert.from_pretrained(our_config['ckpt']).cuda() # NOTE: the BERT (or other modules apart from GPT) was used during the development process and partially used as placeholders in this script, and will not be actually loaded/trained
 else:
   model = our_bert(config).cuda()  # initialize from config, without using pretrained weights
 
