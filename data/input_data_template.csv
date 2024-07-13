@@ -1,0 +1,5 @@
+PID,Time,SBP,DBP,Pulse,Temp,SpO2,Resp,adm_index,drg_code,adm_records,adm_records_time,adm_start,icu_records,icu_records_time,intu_records,intu_records_time,death_records,death_records_time,age,gender_female,hispanic,race_black,race_white,race_other,language_eng,diabetes,htn,ckd,chd,vd_deficiency,obesity,exam_with_abnormal,medical_facilities,reflux,anemia,other_specified_health_status,other_specified_counseling,personal_risk_factors,eventually_die_after_66h_IncludingHome,eventually_die_after_66h_StrictDischarge,eventually_die_all_IncludingHome,eventually_die_all_StrictDischarge,eventually_die_within3weeks_IncludingHome,is_covid_adm
+123456,1/1/2020 21:00,,,,,,,1234,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+123456,1/2/2020 1:00,,,,,,,1234,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+123456,1/2/2020 5:00,,,,,,,1234,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+123456,1/2/2020 9:00,,,,,,,1234,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
