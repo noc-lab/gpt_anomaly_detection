@@ -1,4 +1,4 @@
-
+"""Main script to train GPT using CRM and compute the raw anomaly score"""
 
 import sys
 import os
