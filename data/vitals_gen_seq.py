@@ -1,4 +1,4 @@
-
+"""Further sequentialize the EHR as GPT input"""
 
 
 import csv
