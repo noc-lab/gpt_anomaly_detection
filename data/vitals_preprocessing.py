@@ -1,5 +1,4 @@
-
-
+"""Sequentialize the EHR"""
 
 
 import csv
